@@ -1,0 +1,22 @@
+$name: cat;
+
+.#{$name} {
+
+	&__title {
+		margin-bottom: 20px;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+		}
+	}
+
+	&__wrap {}
+
+	&__text-wrap {
+
+		@include screen-sm() {
+			margin-top: -10px;
+		}
+	}
+}
