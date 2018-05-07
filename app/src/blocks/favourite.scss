@@ -1,0 +1,13 @@
+$name: favourite;
+
+.#{$name} {
+	display: inline-block;
+	width: 25px;
+	height: 21px;
+	background: url($path + 'img/icons/heart/heart.png') no-repeat center / contain;
+
+	&:hover,
+	&_active {
+		background-image: url($path + 'img/icons/heart/heart-hover.png');
+	}
+}
