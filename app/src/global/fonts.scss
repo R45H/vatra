@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url($path + 'fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+	src: url($path + 'fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Open Sans */
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot');
+	src: url($path + 'fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix') format('embedded-opentype'),
+		url($path + 'fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff') format('woff'),
+		url($path + 'fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot');
+	src: url($path + 'fonts/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot?#iefix') format('embedded-opentype'),
+		url($path + 'fonts/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.woff') format('woff'),
+		url($path + 'fonts/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot');
+	src: url($path + 'fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix') format('embedded-opentype'),
+		url($path + 'fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.woff') format('woff'),
+		url($path + 'fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot');
+	src: url($path + 'fonts/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+		url($path + 'fonts/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.woff') format('woff'),
+		url($path + 'fonts/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+/* ========== */
