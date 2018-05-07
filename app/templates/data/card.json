@@ -1,0 +1,28 @@
+{
+	"card": [
+		{
+			"link": "#",
+			"img": "img/content/card/01.jpg",
+			"title": "Декупаж",
+			"manufacturer": "Ласселсбергер",
+			"country": "Россия",
+			"price": "616"
+		},
+		{
+			"link": "#",
+			"img": "img/content/card/02.jpg",
+			"title": "Дарлингтон",
+			"manufacturer": "Kerama Marazzi",
+			"country": "Россия"
+		},
+		{
+			"link": "#",
+			"img": "img/content/card/03.jpg",
+			"title": "Сиена",
+			"manufacturer": "Ласселсбергер",
+			"country": "Россия",
+			"price": "622",
+			"notice": "20%"
+		}
+	]
+}

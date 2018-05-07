@@ -10,3 +10,8 @@ include ../mixins/card
 			a.favourite(href='#')
 		.col-1
 			a.favourite.favourite_active(href='#')
+
+	.row.main__separator
+		each val in card
+			.col-3
+				+card(val)

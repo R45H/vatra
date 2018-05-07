@@ -1,0 +1,70 @@
+$name: card;
+
+.#{$name} {
+	border: 1px solid $color-gray;
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&__img-wrap {
+		display: block;
+		overflow: hidden;
+	}
+
+	&__img {
+		display: block;
+		padding-bottom: 80%;
+		background: no-repeat center / cover;
+	}
+
+	&__text-wrap {
+		padding: 10px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+
+	&__title-name {}
+
+	&__title-manufacturer {}
+
+	&__title-country {}
+
+	&__price-wrap {
+		margin-top: auto;
+		display: flex;
+	}
+
+	&__price {}
+
+	&__favourite {
+		margin-left: auto;
+	}
+
+	&__notice {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		height: 7.5rem;
+		width: 7.5rem;
+		padding: .3em;
+		overflow: hidden;
+		font-size: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: white;
+		background: $color-main;
+		border-radius: 50%;
+		user-select: none;
+		pointer-events: none;
+	}
+}
