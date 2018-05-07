@@ -1,0 +1,51 @@
+$name: btn;
+
+.#{$name} {
+	display: inline-block;
+	position: relative;
+	font-family: $font-main;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-top: 1px solid $color-btn-1;
+	border-right: 1px solid $color-btn-2;
+	border-radius: 3px;
+	background-color: $color-main;
+	text-align: center;
+	cursor: pointer;
+	line-height: 1.2;
+	outline: none;
+	padding: .625em;
+	word-break: break-word;
+
+	&:hover {
+		box-shadow: inset 0 2px 5px darken($color-main, 15%);
+	}
+
+	&:active {
+		background: darken($color-main, 15%);
+	}
+
+	&_sm {
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	&_gray {
+		background: $color-text;
+		border: none;
+
+		&:hover {
+			box-shadow: inset 0 2px 5px darken($color-text, 15%);
+		}
+
+		&:active {
+			background: darken($color-text, 15%);
+		}
+	}
+
+	&_wide {
+		width: 100%;
+	}
+}
