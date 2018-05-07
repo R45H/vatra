@@ -1,0 +1,99 @@
+$name: text;
+
+.#{$name} {
+
+	p {
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul,
+	ol {
+		list-style-type: none;
+		margin: 1em 0;
+
+		> li {
+			position: relative;
+			padding-left: 2em;
+			margin: .5em 0;
+
+			&::before {
+				position: absolute;
+			}
+		}
+
+		ul,
+		ol {
+			margin: .5em 0;
+
+			&:first-child {
+				margin-top: .5em;
+			}
+
+			&:last-child {
+				margin-bottom: .5em;
+			}
+		}
+
+		&:first-child {
+			margin-top: 0;
+
+			> li {
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+
+			> li {
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	ul {
+
+		> li {
+
+			&::before {
+				content: '';
+				width: 6px;
+				height: 6px;
+				left: .7em;
+				top: .7em;
+				background: $color-second;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: list 0;
+
+		> li {
+
+			&::before {
+				counter-increment: list;
+				content: counter(list) '. ';
+				width: 1em;
+				color: $color-second;
+				font-weight: bold;
+				user-select: none;
+				left: .6em;
+			}
+		}
+	}
+}
