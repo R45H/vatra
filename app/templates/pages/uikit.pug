@@ -44,6 +44,12 @@ include ../components/cat
 			a.favourite.favourite_active(href='#')
 
 	.row.main__separator
+		.col-1
+			a.count.count_bag(href='#') 3
+		.col-1
+			a.count.count_favourite(href='#') 2
+
+	.row.main__separator
 		each val in card
 			.col-3
 				+card(val)

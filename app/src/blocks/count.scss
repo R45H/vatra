@@ -1,0 +1,49 @@
+$name: count;
+
+.#{$name} {
+	@extend .link;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		background: no-repeat center / contain;
+		vertical-align: middle;
+	}
+
+	&_bag {
+
+		&::before {
+			margin-right: 5px;
+			width: 25px;
+			height: 19px;
+			background-image: url($path + 'img/icons/bag/bag.png');
+		}
+
+		&:hover {
+
+			&::before {
+				background-image: url($path + 'img/icons/bag/bag-black.png');
+			}
+		}
+	}
+
+	&_favourite {
+
+		&::before {
+			margin-right: 5px;
+			width: 20px;
+			height: 18px;
+			background-image: url($path + 'img/icons/heart/heart-sm.png');
+		}
+
+		&:hover {
+
+			&::before {
+				background-image: url($path + 'img/icons/heart/heart-sm-black.png');
+			}
+		}
+	}
+}
