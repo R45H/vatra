@@ -1,0 +1,10 @@
+.slider
+
+	each val in slider
+		a.slider__item(href= val.link)
+			.slider__img(
+				style='background-image: url(' + val.img + ');'
+				role='img'
+				aria-label= val.title
+				title= val.title
+			)

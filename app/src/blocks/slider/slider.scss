@@ -1,0 +1,123 @@
+$name: slider;
+
+.#{$name} {
+
+	.slick-slide {
+
+		> div {
+			display: flex;
+		}
+	}
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__arrow {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__item {
+		outline: none;
+		display: block;
+	}
+
+	&__img {
+		padding-bottom: 50%;
+		background: no-repeat center / cover;
+	}
+
+	&__arrow {
+		position: absolute;
+		z-index: 1;
+		width: 10%;
+		cursor: pointer;
+		font-size: 5rem;
+		color: white;
+		top: 0;
+		bottom: 0;
+		opacity: 0;
+		transition: opacity $duration ease;
+
+		@include screen-sm() {
+			bottom: 54px;
+		}
+
+		&::after {
+			font-family: $font-fa;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			color: $color-main;
+		}
+
+		&_prev {
+			left: 0;
+			background: linear-gradient(to right, rgba($color-text, .3) 0%, rgba($color-text, .3) 50%, transparent 100%);
+
+			&::after {
+				content: '\f104';
+			}
+		}
+
+		&_next {
+			right: 0;
+			background: linear-gradient(to left, rgba($color-text, .3) 0%, rgba($color-text, .3) 50%, transparent 100%);
+
+			&::after {
+				content: '\f105';
+			}
+		}
+	}
+
+	&__dots {
+		margin: 10px 0 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding: 13px 10px;
+			cursor: pointer;
+
+			&:hover {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background: black;
+					}
+				}
+			}
+
+			&.slick-active {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background: $color-main;
+					}
+				}
+			}
+		}
+	}
+
+	&__dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: $color-text;
+		display: block;
+	}
+}
