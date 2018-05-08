@@ -1,0 +1,24 @@
+{
+	"cat_icon": [
+		{
+			"link": "#",
+			"title": "Каталог",
+			"img": "img/icons/cat-icon/01.png"
+		},
+		{
+			"link": "#",
+			"title": "Акции",
+			"img": "img/icons/cat-icon/02.png"
+		},
+		{
+			"link": "#",
+			"title": "Производители",
+			"img": "img/icons/cat-icon/03.png"
+		},
+		{
+			"link": "#",
+			"title": "Где купить",
+			"img": "img/icons/cat-icon/04.png"
+		}
+	]
+}

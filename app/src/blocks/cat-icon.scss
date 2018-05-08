@@ -1,0 +1,26 @@
+$name: cat-icon;
+
+.#{$name} {
+	display: block;
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				filter: grayscale(1) brightness(2);
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__img {
+		padding-bottom: 68%;
+		background: no-repeat center / cover;
+		transition: $duration ease;
+	}
+}
