@@ -1,5 +1,6 @@
 include ../mixins/card
 include ../components/cat
+include ../components/social
 
 .container
 	.row.main__separator
@@ -48,6 +49,10 @@ include ../components/cat
 			a.count.count_bag(href='#') 3
 		.col-1
 			a.count.count_favourite(href='#') 2
+
+	.row.main__separator
+		.col-4
+			+social(social)
 
 	.row.main__separator
 		each val in card

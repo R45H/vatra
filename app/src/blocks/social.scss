@@ -1,0 +1,90 @@
+$name: social;
+
+.#{$name} {
+	display: inline-block;
+
+	&__wrap {
+		margin: -5px;
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-text;
+		border: 1px solid;
+		border-radius: 3px;
+		font-size: 19px;
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+
+		&:hover {
+			color: $color-main;
+		}
+
+		&:active {
+			color: darken($color-main, 15%);
+		}
+
+		&_vk {
+
+			&:hover {
+				color: $color-vk;
+			}
+
+			&:active {
+				color: darken($color-vk, 15%);
+			}
+		}
+
+		&_facebook {
+
+			&:hover {
+				color: $color-fb;
+			}
+
+			&:active {
+				color: darken($color-fb, 15%);
+			}
+		}
+
+		&_instagram {
+
+			&:hover {
+				color: $color-insta;
+			}
+
+			&:active {
+				color: darken($color-insta, 15%);
+			}
+		}
+
+		&_youtube {
+
+			&:hover {
+				color: $color-yt;
+			}
+
+			&:active {
+				color: darken($color-yt, 15%);
+			}
+		}
+
+		&_houzz {
+
+			&:hover {
+				color: $color-houzz;
+			}
+
+			&:active {
+				color: darken($color-houzz, 15%);
+			}
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: 100%;
+	}
+}
