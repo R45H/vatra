@@ -7,14 +7,13 @@ $name: btn;
 	font-size: 16px;
 	font-weight: bold;
 	color: white;
-	border: none;
-	border-top: 1px solid $color-btn-1;
-	border-right: 1px solid $color-btn-2;
+	border: 1px solid;
+	border-color: $color-btn-1 $color-btn-2 transparent transparent;
 	border-radius: 3px;
 	background-color: $color-main;
 	text-align: center;
 	cursor: pointer;
-	line-height: 1.2;
+	line-height: 1.15;
 	outline: none;
 	padding: .625em;
 	word-break: break-word;
@@ -34,7 +33,7 @@ $name: btn;
 
 	&_gray {
 		background: $color-text;
-		border: none;
+		border-color: $color-text $color-text transparent transparent;
 
 		&:hover {
 			box-shadow: inset 0 2px 5px darken($color-text, 15%);

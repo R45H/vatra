@@ -3,3 +3,6 @@
 @import '../libs/fontawesome/css/font-awesome.css';
 @import '../libs/slick-carousel/slick/slick.css';
 @import '../libs/fancybox/dist/jquery.fancybox.css';
+
+@import '../libs/jquery-ui/themes/base/selectmenu.css';
+@import '../libs/jquery-ui/themes/base/button.css';

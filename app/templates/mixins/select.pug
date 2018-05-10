@@ -1,0 +1,11 @@
+mixin select(data, opts)
+	.select(class= opts && opts.wide ? 'select_wide' : '')
+		select.select__origin(class= opts && opts.colors ? 'select__origin_colors' : '')
+
+			each val in data
+				option(
+					value= val.value
+					disabled= val.placeholder ? '' : false
+					selected= val.placeholder ? '' : false
+					data-style= val.color ? 'background-color: ' + val.color + ';' : ''
+				)!= val.text || val.placeholder

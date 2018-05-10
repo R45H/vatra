@@ -1,6 +1,7 @@
 include ../mixins/card
 include ../mixins/cat-icon
 include ../mixins/fancybox
+include ../mixins/select
 include ../components/cat
 include ../components/social
 
@@ -46,6 +47,18 @@ include ../components/social
 			.btn.btn_sm .btn.btn_sm
 		.col-2
 			.btn.btn_wide .btn.btn_wide
+
+	.row.main__separator
+		.col-2
+			+select(select[0].item)
+		.col-2
+			+select(select[0].item, {
+				wide: true
+			})
+		.col-2
+			+select(select[1].item, {
+				colors: true
+			})
 
 	.row.main__separator
 		.col-1

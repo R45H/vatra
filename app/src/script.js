@@ -5,6 +5,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/slider/slider.js'
 	}());
+	(function() {
+		//=require 'blocks/select/select.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

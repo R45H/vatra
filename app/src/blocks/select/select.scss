@@ -1,0 +1,144 @@
+$name: select;
+
+.#{$name} {
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+
+	&__current {
+		outline: none;
+		padding: 12px 50px 12px 20px;
+		border: 1px solid;
+		border-radius: 3px;
+		font-size: 14px;
+		line-height: 1;
+		margin: 0;
+		appearance: none;
+		display: flex;
+		align-items: center;
+		transition: border-radius $duration / 2 ease;
+
+		&::before {
+			content: '';
+			height: 0;
+			width: 0;
+			border-style: solid;
+			border-width: 4px 5px 0;
+			border-right-color: transparent;
+			border-left-color: transparent;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			transition: transform $duration / 2 ease;
+		}
+
+		&:hover {
+			color: $color-second;
+		}
+
+		&_active {
+			color: $color-second;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+
+			&::before {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+
+		&.ui-button {
+			width: auto;
+		}
+
+		& .ui-icon {
+			display: none;
+		}
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__list {
+		z-index: 10;
+		border: 0;
+		font-size: 14px;
+		line-height: 1.15;
+
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			margin-top: -1px;
+			color: $color-text;
+			border: 1px solid $color-second;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			background: white;
+			max-height: 18em;
+			position: relative;
+			outline: none;
+		}
+
+		.ui-menu-item {
+			cursor: pointer;
+
+			&:first-child {
+
+				.ui-menu-item-wrapper {
+					padding-top: 18px;
+				}
+			}
+
+			&:last-child {
+
+				.ui-menu-item-wrapper {
+					padding-bottom: 18px;
+				}
+			}
+
+			&.ui-state-disabled {
+				font-weight: bold;
+				cursor: auto;
+
+				.ui-state-active {
+					color: $color-text;
+				}
+			}
+		}
+
+		.ui-menu-item-wrapper {
+			padding: 10px 20px;
+			outline: none;
+			position: relative;
+
+			&.ui-state-active {
+				color: $color-second;
+			}
+
+			&:active {
+
+			}
+		}
+	}
+
+	&__color {
+		width: 36px;
+		height: 34px;
+		display: inline-block;
+		vertical-align: middle;
+		margin: -10px 10px -10px -18px;
+		border: 1px solid $color-gray;
+	}
+
+	&_wide {
+		display: block;
+
+		.#{$name} {
+
+			&__current {
+				width: 100%;
+			}
+		}
+	}
+}
