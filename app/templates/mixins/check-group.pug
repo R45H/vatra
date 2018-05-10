@@ -1,0 +1,10 @@
+include check
+
+mixin check-group(data)
+	.check-group
+
+		each val, i in data
+			+check({
+				value: val + '-' + (i + 1),
+				text: val
+			})(class='check_btn check-group__btn')

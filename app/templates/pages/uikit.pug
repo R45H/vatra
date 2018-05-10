@@ -3,6 +3,7 @@ include ../mixins/cat-icon
 include ../mixins/fancybox
 include ../mixins/select
 include ../mixins/check
+include ../mixins/check-group
 include ../components/cat
 include ../components/social
 
@@ -96,6 +97,10 @@ include ../components/social
 				text: '.check.check_btn:checked',
 				checked: true
 			})(class='check_btn')
+
+	.row.main__separator
+		.col-12
+			+check-group(check_group)
 
 	.row.main__separator
 		.col-1

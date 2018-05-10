@@ -1,0 +1,43 @@
+$name: check-group;
+
+.#{$name} {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -5px;
+	overflow: hidden;
+
+	&__btn {
+		margin-bottom: 5px;
+
+		&:not(:first-child) {
+			margin-left: -1px;
+
+			.check__label {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		&:not(:last-child) {
+
+			.check__label {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&:hover {
+			z-index: 2;
+		}
+
+		.check__input {
+
+			&:checked {
+
+				+ .check__label {
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
