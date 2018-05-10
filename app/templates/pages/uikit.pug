@@ -4,6 +4,7 @@ include ../mixins/fancybox
 include ../mixins/select
 include ../mixins/check
 include ../mixins/check-group
+include ../mixins/news
 include ../components/cat
 include ../components/social
 include ../components/search
@@ -159,3 +160,7 @@ include ../components/search
 				group: 'group-1',
 				bg: true
 			})
+
+	.row.main__separator
+		.col-12
+			+news(news[0])

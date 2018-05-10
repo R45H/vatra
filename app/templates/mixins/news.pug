@@ -1,0 +1,5 @@
+mixin news(data)
+	.news
+		a.link.news__title(href= data.link)= data.title
+		.text.news__desc!= data.desc
+		time.news__date(datetime= data.dateFormat)= data.date
