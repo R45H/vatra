@@ -5,9 +5,9 @@ $name: input;
 	padding: 10px 20px;
 	border: 1px solid;
 	border-radius: 3px;
-	background: transparent;
+	background: white;
 	font-family: $font-main;
-	font-weight: 300;
+	font-weight: normal;
 	color: $color-text;
 	max-width: 100%;
 	outline: none;
@@ -18,11 +18,27 @@ $name: input;
 		color: $color-text;
 	}
 
+	&:hover {
+		border-color: $color-second;
+
+		@include input-placeholder() {
+			color: $color-second;
+		}
+	}
+
 	&_invalid {
 		color: $color-main;
 
 		@include input-placeholder() {
 			color: $color-main;
+		}
+
+		&:hover {
+			border-color: $color-main;
+
+			@include input-placeholder() {
+				color: $color-main;
+			}
 		}
 	}
 
