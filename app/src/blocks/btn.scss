@@ -2,6 +2,7 @@ $name: btn;
 
 .#{$name} {
 	display: inline-block;
+	max-width: 100%;
 	position: relative;
 	font-family: $font-main;
 	font-size: 16px;
@@ -17,6 +18,8 @@ $name: btn;
 	outline: none;
 	padding: .625em;
 	word-break: break-word;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
 	&:hover {
 		box-shadow: inset 0 2px 5px darken($color-main, 15%);
@@ -41,6 +44,24 @@ $name: btn;
 
 		&:active {
 			background: darken($color-text, 15%);
+		}
+	}
+
+	&_lightgray {
+		background: $color-light;
+		border-color: $color-light;
+		color: $color-text;
+		font-weight: bold;
+		transition: $duration / 2 ease;
+
+		&:hover {
+			box-shadow: none;
+			color: white;
+			background: $color-main;
+		}
+
+		&:active {
+			background: darken($color-main, 15%);
 		}
 	}
 
