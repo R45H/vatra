@@ -8,6 +8,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/select/select.js'
 	}());
+	(function() {
+		//=require 'blocks/search/search.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

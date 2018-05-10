@@ -1,0 +1,86 @@
+$name: search;
+
+.#{$name} {
+	display: block;
+	width: 100%;
+	position: relative;
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding-right: 40px;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 40px;
+		width: 40px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::after {
+			content: '\f002';
+			display: block;
+			font-family: $font-fa;
+		}
+
+		&:hover {
+			color: $color-second;
+		}
+
+		&:active {
+			color: darken($color-second, 15%);
+		}
+	}
+
+	&__sub {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: white;
+		box-shadow: 0 0 11px 2px rgba(black, .34);
+		z-index: 5;
+		padding: 20px 0 5px;
+		display: none;
+
+		&_visible {
+			display: block;
+		}
+	}
+
+	&__title {
+		margin: 0 20px 5px;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin-bottom: 10px;
+	}
+
+	&__item {
+
+	}
+
+	&__link {
+		display: block;
+		line-height: 2.5;
+		margin: 0;
+		padding: 0 30px;
+		font-size: 14px;
+
+		&:hover {
+			background: lighten($color-light, 5%);
+		}
+
+		&_more {
+			font-weight: bold;
+		}
+	}
+}

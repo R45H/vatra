@@ -61,6 +61,7 @@ $name: btn;
 		}
 
 		&:active {
+			transition: none;
 			background: darken($color-main, 15%);
 		}
 	}

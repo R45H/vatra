@@ -6,6 +6,7 @@ include ../mixins/check
 include ../mixins/check-group
 include ../components/cat
 include ../components/social
+include ../components/search
 
 .container
 	.row.main__separator
@@ -65,6 +66,10 @@ include ../components/social
 			textarea.input(placeholder='textarea.input')
 		.col-3
 			input.input.input_lightgray(type='text' placeholder='.input.input_lightgray')
+
+	.row.main__separator
+		.col-4
+			+search(search[0])
 
 	.row.main__separator
 		.col-2

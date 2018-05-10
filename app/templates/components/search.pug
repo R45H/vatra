@@ -1,0 +1,14 @@
+mixin search(data)
+	form.search
+		input.input.input_lightgray.search__input(type='text' placeholder= data.placeholder)
+		a.search__btn(href='#')
+		.search__sub
+			.search__title= data.title
+			ul.search__list
+
+				each val in data.list
+					li.search__item
+						a.link.search__link(href='#')= val
+
+				li.search__item
+					a.link.search__link.search__link_more(href='#') Расширенный подбор
