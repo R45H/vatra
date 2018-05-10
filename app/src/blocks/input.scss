@@ -1,0 +1,41 @@
+$name: input;
+
+.#{$name} {
+	appearance: none;
+	padding: 10px 20px;
+	border: 1px solid;
+	border-radius: 3px;
+	background: transparent;
+	font-family: $font-main;
+	font-weight: 300;
+	color: $color-text;
+	max-width: 100%;
+	outline: none;
+
+	@include input-autofill($color-text, $color-text, white);
+
+	@include input-placeholder() {
+		color: $color-text;
+	}
+
+	&_invalid {
+		color: $color-main;
+
+		@include input-placeholder() {
+			color: $color-main;
+		}
+	}
+
+	&_sm {
+		font-size: 14px;
+	}
+
+	&_wide {
+		display: block;
+		width: 100%;
+	}
+}
+
+textarea.#{$name} {
+	height: 5em;
+}
