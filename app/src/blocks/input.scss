@@ -20,10 +20,6 @@ $name: input;
 
 	&:hover {
 		border-color: $color-second;
-
-		@include input-placeholder() {
-			color: $color-second;
-		}
 	}
 
 	&_invalid {
@@ -35,15 +31,17 @@ $name: input;
 
 		&:hover {
 			border-color: $color-main;
-
-			@include input-placeholder() {
-				color: $color-main;
-			}
 		}
 	}
 
 	&_sm {
 		font-size: 14px;
+	}
+
+	&_lightgray {
+		background: lighten($color-light, 5%);
+		border-color: darken($color-gray, 5%);
+		transition: $duration / 2 ease;
 	}
 
 	&_wide {
