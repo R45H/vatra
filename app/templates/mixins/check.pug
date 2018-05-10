@@ -1,0 +1,9 @@
+mixin check(data)
+	.check(class= attributes.class)
+		input.check__input(
+			type='checkbox'
+			value= data.value
+			id= 'check-' + data.value
+			checked= data.checked
+		)
+		label.check__label(for= 'check-' + data.value)= data.text

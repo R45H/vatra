@@ -2,6 +2,7 @@ include ../mixins/card
 include ../mixins/cat-icon
 include ../mixins/fancybox
 include ../mixins/select
+include ../mixins/check
 include ../components/cat
 include ../components/social
 
@@ -71,6 +72,30 @@ include ../components/social
 			+select(select[1].item, {
 				colors: true
 			})
+
+	.row.main__separator
+		.col-2
+			+check({
+				value: '1',
+				text: '.check'
+			})
+		.col-2
+			+check({
+				value: '2',
+				text: '.check:checked',
+				checked: true
+			})
+		.col-2
+			+check({
+				value: '3',
+				text: '.check.check_btn'
+			})(class='check_btn')
+		.col-3
+			+check({
+				value: '4',
+				text: '.check.check_btn:checked',
+				checked: true
+			})(class='check_btn')
 
 	.row.main__separator
 		.col-1

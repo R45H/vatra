@@ -1,0 +1,62 @@
+$name: check;
+
+.#{$name} {
+	display: inline-block;
+	max-width: 100%;
+
+	&__input {
+		display: none;
+
+		&:checked {
+
+			+ .#{$name}__label {
+				color: $color-main;
+
+				&::before {
+					content: '\f046';
+				}
+			}
+		}
+	}
+
+	&__label {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 1.3em;
+
+		&::before {
+			content: '\f096';
+			font-family: $font-fa;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 5px;
+		}
+
+		&:hover {
+			color: $color-second;
+		}
+	}
+
+	&_btn {
+
+		.#{$name} {
+			// =====
+
+			&__label {
+				cursor: default;
+				padding: 10px 20px;
+				border: 1px solid;
+				border-radius: 3px;
+				line-height: 1.15;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}
