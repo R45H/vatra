@@ -1,5 +1,6 @@
 include ../mixins/card
 include ../mixins/cat-icon
+include ../mixins/fancybox
 include ../components/cat
 include ../components/social
 
@@ -75,5 +76,15 @@ include ../components/social
 
 	.row.main__separator
 		.col-3
-			a(href='img/content/card/01.jpg' data-fancybox data-caption="Img 1")
-				img(src='img/content/card/01.jpg' alt='')
+			+fancybox({
+				link: 'img/content/card/01.jpg',
+				title: 'Img 1',
+				group: 'group-1'
+			})
+		.col-3
+			+fancybox({
+				link: 'img/content/card/01.jpg',
+				title: 'Img 1',
+				group: 'group-1',
+				bg: true
+			})
