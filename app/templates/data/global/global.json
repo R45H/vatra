@@ -1,13 +1,11 @@
 {
-	"global": [
-		{
-			"name": "Ватра Керамика",
-			"link_home": "/",
-			"tel": "+7 (495) 767-00-40",
-			"tel_link": "+74957670040",
-			"email": "internet@kdv.ru",
-			"time_start": "10:00",
-			"time_end": "21:00"
-		}
-	]
+	"global": {
+		"name": "Ватра Керамика",
+		"link_home": "/",
+		"tel": "+7 (495) 767-00-40",
+		"tel_link": "+74957670040",
+		"email": "internet@kdv.ru",
+		"time_start": "10:00",
+		"time_end": "21:00"
+	}
 }

@@ -13,8 +13,8 @@ header.header
 				+search(search[0])
 
 			.col-sm.col-lg-3.header__col.header__contacts-wrap
-				a.link.header__tel(href= 'tel:' + global[0].tel_link)= global[0].tel
-				.header__time= 'ежедневно с ' + global[0].time_start + ' до ' + global[0].time_end
+				a.link.header__tel(href= 'tel:' + global.tel_link)= global.tel
+				.header__time= 'ежедневно с ' + global.time_start + ' до ' + global.time_end
 
 		.row
 
@@ -25,14 +25,14 @@ header.header
 
 						if !val.other
 							li.header__menu-item
-								a.header__menu-link(href= val.link)= val.name
+								a.link.link_gray.header__menu-link(href= val.link)= val.name
 
 								if val.sub
 									ul.header__menu-sub
 
 										each sub in val.sub
 											li.header__menu-sub-item
-												a.header__menu-sub-link(href= sub.link)= sub.name
+												a.link.link_gray.header__menu-sub-link(href= sub.link)= sub.name
 
 			.col-sm-3.col-lg-2
 				.header__count-wrap

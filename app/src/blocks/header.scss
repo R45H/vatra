@@ -27,8 +27,7 @@ $name: header;
 
 	&__contacts-wrap {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
+		flex-flow: column wrap;
 		align-items: center;
 
 		@include screen-sm() {
@@ -145,10 +144,6 @@ $name: header;
 		@include screen-xl() {
 			font-size: 17px;
 		}
-
-		&:hover {
-			color: black;
-		}
 	}
 
 	&__menu-sub {
@@ -198,9 +193,5 @@ $name: header;
 	&__menu-sub-link {
 		display: block;
 		padding: 3px 15px;
-
-		&:hover {
-			color: black;
-		}
 	}
 }

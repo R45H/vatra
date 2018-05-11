@@ -2,4 +2,98 @@ $name: footer;
 
 .#{$name} {
 	flex: none;
+	background: $color-light;
+	padding: 25px 0;
+
+	&__top {
+		font-size: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include screen-xxl() {
+			justify-content: space-around;
+		}
+	}
+
+	&__col {
+		margin-bottom: 25px;
+		width: 100%;
+
+		@include screen-sm() {
+			width: 50%;
+		}
+
+		@include screen-md() {
+			width: 33.33333%;
+		}
+
+		@include screen-lg() {
+			width: auto;
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+
+		@include screen-sm() {
+			justify-content: flex-start;
+		}
+	}
+
+	&__link-name {
+		margin-right: .3em;
+	}
+
+	&__link {
+		padding: 2px 0;
+		display: inline-block;
+		line-height: 1.4;
+
+		@include screen-sm() {
+			padding: 4px 0;
+		}
+	}
+
+	&__social-wrap {
+		margin-top: 25px;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+		}
+	}
+
+	&__bot {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		@include screen-md() {
+			flex-direction: row;
+			text-align: left;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+	}
+
+	&__policy-wrap {
+
+	}
+
+	&__policy {
+		display: flex;
+		justify-content: center;
+
+		@include screen-md() {
+			justify-content: flex-end;
+		}
+	}
+
+	&__link-underline {
+		text-decoration: underline;
+		font-size: 14px;
+	}
 }

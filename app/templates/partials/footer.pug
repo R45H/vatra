@@ -1,2 +1,58 @@
+include ../components/social
+
 // FOOTER
 footer.footer
+	.container
+
+		.footer__top
+
+			.footer__col
+
+				each val in g_menu
+
+					if !val.other
+						.footer__item
+							a.link.link_gray.footer__link(href= val.link)= val.name
+
+			.footer__col
+
+				each val in g_menu
+
+					if val.sub
+
+						each sub in val.sub
+							.footer__item
+								a.link.link_gray.footer__link(href= sub.link)= sub.name
+
+			.footer__col
+
+				each val in g_menu
+
+					if val.other
+						.footer__item
+							a.link.link_gray.footer__link(href= val.link)= val.name
+
+			.footer__col
+				.footer__item
+					span.footer__link-name= 'тел.: '
+					a.link.link_gray.footer__link(href= 'tel:' + global.tel_link)= global.tel
+				.footer__item
+					span.footer__link-name= 'факс: '
+					a.link.link_gray.footer__link(href= 'tel:' + global.tel_link)= global.tel
+				.footer__item
+					span.footer__link-name= 'email: '
+					a.link.link_gray.footer__link(href= 'mailto:' + global.email)= global.email
+
+				.footer__social-wrap
+					+social(social)
+
+		.footer__bot
+
+			.text
+				p Все права защищены © «#{global.name}»
+
+			.footer__policy-wrap
+				.footer__policy
+					a.link.link_gray(href='#') Политика конфиденциальности
+				.footer__policy
+					a.link.link_gray.footer__link-underline(href='#') Перейти на старую версию сайта
