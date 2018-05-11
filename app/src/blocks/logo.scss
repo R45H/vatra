@@ -3,6 +3,11 @@ $name: logo;
 .#{$name} {
 	display: inline-block;
 	max-width: 100%;
+	transition: $duration / 2 ease;
+
+	&:hover {
+		opacity: .8;
+	}
 
 	&__img {
 		display: block;
