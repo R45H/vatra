@@ -36,10 +36,12 @@ $name: footer;
 	&__item {
 		display: flex;
 		justify-content: center;
+		text-align: center;
 		align-items: baseline;
 
 		@include screen-sm() {
 			justify-content: flex-start;
+			text-align: left;
 		}
 	}
 

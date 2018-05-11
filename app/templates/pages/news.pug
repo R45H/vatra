@@ -1,0 +1,19 @@
+include ../mixins/news
+include ../components/social
+
+.section.section_space-bot_half
+	.container
+		h1.title Новости
+
+.section.section_space-bot_none
+	.container
+
+		each val in news
+			.row
+				.col-xl-7.main__space-col
+					+news(val)
+
+.section
+	.container
+		p.title.title_xs.main__space-bot-half Больше новостей в наших социальных сетях:
+		+social(social)

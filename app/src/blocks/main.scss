@@ -17,11 +17,29 @@ $name: main;
 		margin-bottom: 30px;
 	}
 
+	&__space {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
 	&__space-bot {
 		margin-bottom: 3rem;
 	}
 
 	&__space-top {
 		margin-top: 3rem;
+	}
+
+	&__space-half {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&__space-bot-half {
+		margin-bottom: 1.5rem;
+	}
+
+	&__space-top-half {
+		margin-top: 1.5rem;
 	}
 }

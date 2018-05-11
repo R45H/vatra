@@ -7,11 +7,29 @@ $name: section;
 		padding-bottom: 6rem;
 	}
 
+	&_space_none {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
 	&_space-bot_none {
 		padding-bottom: 0;
 	}
 
 	&_space-top_none {
 		padding-top: 0;
+	}
+
+	&_space_half {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	&_space-bot_half {
+		padding-bottom: 1.5rem;
+	}
+
+	&_space-top_half {
+		padding-top: 1.5rem;
 	}
 }
