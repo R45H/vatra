@@ -39,7 +39,7 @@ $name: input;
 	}
 
 	&_lightgray {
-		background: lighten($color-light, 5%);
+		background: $color-lighter;
 		border-color: darken($color-gray, 5%);
 		transition: $duration / 2 ease;
 	}

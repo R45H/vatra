@@ -76,7 +76,7 @@ $name: search;
 		font-size: 14px;
 
 		&:hover {
-			background: lighten($color-light, 5%);
+			background: $color-lighter;
 		}
 
 		&_more {

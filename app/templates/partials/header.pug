@@ -1,2 +1,40 @@
+include ../components/search
+
 // HEADER
 header.header
+	.container.header__wrap
+
+		.row.header__top
+
+			.col-12.col-sm-4.col-lg-3.header__col.header__logo-wrap
+				include ../components/logo
+
+			.col-sm-8.col-lg.header__col
+				+search(search[0])
+
+			.col-sm.col-lg-3.header__col.header__contacts-wrap
+				a.link.header__tel(href= 'tel:' + global[0].tel_link)= global[0].tel
+				.header__time= 'ежедневно с ' + global[0].time_start + ' до ' + global[0].time_end
+
+		.row
+
+			.col-12.col-sm
+				ul.header__menu
+
+					each val in g_menu
+
+						if !val.other
+							li.header__menu-item
+								a.header__menu-link(href= val.link)= val.name
+
+								if val.sub
+									ul.header__menu-sub
+
+										each sub in val.sub
+											li.header__menu-sub-item
+												a.header__menu-sub-link(href= sub.link)= sub.name
+
+			.col-sm-3.col-lg-2
+				.header__count-wrap
+					a.count.count_bag.header__count(href='#') 3
+					a.count.count_favourite.header__count(href='#') 2
