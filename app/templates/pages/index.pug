@@ -1,0 +1,28 @@
+include ../mixins/cat-icon
+include ../components/cat
+
+.section
+	.container
+		.row
+			.col.col-xxl-10.offset-xxl-1
+				include ../components/slider
+
+.section.section_space-bot_none
+	.container
+		.row
+
+			each val in cat_icon
+				.col-6.col-md-4.col-lg-3.main__space-bot
+					+cat-icon(val)
+
+.section
+	.container
+		.text
+			h2 Керамическая плитка
+			p Основное направление деятельности компании «Ватра Керамика» – продажа керамической плитки в Москве. У нас вы сможете купить плитку для любого помещения, а также отдельные декоративные и функциональные элементы, например, ступени.
+			h3 Максимально широкий ассортимент облицовочной керамики
+			p Мы предлагаем широкий ассортиментный ряд керамических облицовочных материалов.
+
+each val in cat
+	.section
+		+cat(val)

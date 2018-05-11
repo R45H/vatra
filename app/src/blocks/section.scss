@@ -1,5 +1,17 @@
 $name: section;
 
 .#{$name} {
+	padding: 3rem 0;
 
+	&:last-child {
+		padding-bottom: 6rem;
+	}
+
+	&_space-bot_none {
+		padding-bottom: 0;
+	}
+
+	&_space-top_none {
+		padding-top: 0;
+	}
 }

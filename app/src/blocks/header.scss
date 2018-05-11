@@ -151,6 +151,7 @@ $name: header;
 		top: 100%;
 		margin-top: 1px;
 		left: 0;
+		min-width: 100%;
 		background: $color-lighter;
 		list-style-type: none;
 		text-align: left;
@@ -162,7 +163,7 @@ $name: header;
 		opacity: 0;
 		visibility: hidden;
 		transition: $duration / 2 ease;
-		z-index: 1;
+		z-index: 5;
 	}
 
 	&__menu-sub-item {
@@ -193,5 +194,10 @@ $name: header;
 	&__menu-sub-link {
 		display: block;
 		padding: 3px 15px;
+		font-size: 15px;
+
+		@include screen-xl() {
+			font-size: 17px;
+		}
 	}
 }

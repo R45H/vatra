@@ -16,6 +16,10 @@ $name: cat-icon;
 
 	&__title {
 		margin-bottom: 10px;
+
+		@include screen-sm(max) {
+			font-size: 16px;
+		}
 	}
 
 	&__img {
