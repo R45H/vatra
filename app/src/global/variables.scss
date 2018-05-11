@@ -22,6 +22,12 @@ $point-lg: 992px;
 $point-xl: 1200px;
 $point-xxl: 1500px;
 
+$point-sm-max: 575px;
+$point-md-max: 767px;
+$point-lg-max: 991px;
+$point-xl-max: 1199px;
+$point-xxl-max: 1499px;
+
 $font-main: 'OpenSans', sans-serif;
 $font-fa: 'FontAwesome', sans-serif;
 
@@ -44,35 +50,35 @@ $path: '../';
 // Брейкпоинты
 @mixin screen-sm($direct: 'min') {
 
-	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-sm-max}', 'min-width: #{$point-sm}')) {
 		@content;
 	}
 }
 
 @mixin screen-md($direct: 'min') {
 
-	@media (if($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-md-max}', 'min-width: #{$point-md}')) {
 		@content;
 	}
 }
 
 @mixin screen-lg($direct: 'min') {
 
-	@media (if($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-lg-max}', 'min-width: #{$point-lg}')) {
 		@content;
 	}
 }
 
 @mixin screen-xl($direct: 'min') {
 
-	@media (if($direct == 'max', 'max-width: #{$point-xl} - 1', 'min-width: #{$point-xl}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-xl-max}', 'min-width: #{$point-xl}')) {
 		@content;
 	}
 }
 
 @mixin screen-xxl($direct: 'min') {
 
-	@media (if($direct == 'max', 'max-width: #{$point-xxl} - 1', 'min-width: #{$point-xxl}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-xxl-max}', 'min-width: #{$point-xxl}')) {
 		@content;
 	}
 }
