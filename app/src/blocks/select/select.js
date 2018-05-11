@@ -33,13 +33,17 @@ $select.each(function() {
 					.prependTo($text);
 			}
 		});
+
+		$(window).on('resize', function() {
+			$this.iconselectmenu('close');
+		});
 	} else {
 		$this.selectmenu({
 			classes: innerClasses
 		});
-	}
-});
 
-$(window).on('resize', function() {
-	$select.selectmenu('close');
+		$(window).on('resize', function() {
+			$this.selectmenu('close');
+		});
+	}
 });
