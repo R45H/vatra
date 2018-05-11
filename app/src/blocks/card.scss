@@ -9,13 +9,23 @@ $name: card;
 
 	&__img-wrap {
 		display: block;
+		padding-bottom: 80%;
 		overflow: hidden;
+		position: relative;
 	}
 
 	&__img {
-		display: block;
-		padding-bottom: 80%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		background: no-repeat center / cover;
+		transition: $duration linear;
+
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 
 	&__text-wrap {
