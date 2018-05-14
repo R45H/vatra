@@ -11,6 +11,15 @@ html(lang="ru")
 		include ../partials/header
 
 		main.main
+
+			if page.noTitle !== true
+				.section.section_space-bot_half
+					.container
+						h1.title= page.title
+
+						if page.desc
+							.text.main__space-top!= page.desc
+
 			block content
 
 		include ../partials/footer
