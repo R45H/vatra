@@ -11,6 +11,10 @@ $name: link;
 		margin-left: 3px;
 	}
 
+	&_dotted {
+		border-bottom: 1px dotted;
+	}
+
 	&_gray {
 		color: inherit;
 	}

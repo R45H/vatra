@@ -1,0 +1,45 @@
+include ../mixins/check
+include ../mixins/check-group
+include ../mixins/select
+include ../components/check-block
+
+.section
+	.container
+
+		.row
+
+			each val in ['Сбросить фильтр', 'Показать результаты']
+				.col-sm-6.col-md-4.col-lg-3.col-xxl-2.main__space-bot
+					a.btn.btn_wide.btn_lightgray(href='#')= val
+
+		.row.align-items-center
+			.main__space-bot.col-md-3.col-lg-2.main__search-first-col Поверхность:
+			.main__space-bot.col-md-9.col-lg-10
+				+check-group(check_group)
+
+		.row.align-items-center
+			.main__space-bot.col-md-3.col-lg-2.main__search-first-col Цвет:
+			.main__space-bot.col-md-9.col-lg-10
+				+select(select[1].item)
+
+		.row.align-items-center
+			.main__space-bot.col-md-3.col-lg-2.main__search-first-col Производители:
+			.main__space-bot.col-md-9.col-lg-10
+				+check-block(select[2].item)
+
+		.row.align-items-baseline
+			.main__space-bot.col-md-3.col-lg-2.main__search-first-col Формат:
+			.main__space-bot.col-md-9.col-lg-6
+
+				each val, i in check
+					.main__fixed-check
+						+check({
+							value: 'check-format-' + i,
+							text: val
+						})
+
+		.row
+
+			each val in ['Сбросить фильтр', 'Показать результаты']
+				.col-sm-6.col-md-4.col-lg-3.col-xxl-2.main__space-bot
+					a.btn.btn_wide.btn_lightgray(href='#')= val

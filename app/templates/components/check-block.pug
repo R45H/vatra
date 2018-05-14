@@ -1,0 +1,19 @@
+include ../mixins/check
+
+mixin check-block(data)
+
+	.check-block
+
+		.check-block__check-wrap
+			each val, i in data
+				if !i
+					- continue;
+
+				.main__fixed-check
+					+check({
+						value: 'check-manufacturer-' + i,
+						text: val.text
+				})
+
+		.check-block__btn-wrap
+			a.link.link_dotted(href='#') Показать все фабрики

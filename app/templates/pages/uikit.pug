@@ -8,6 +8,7 @@ include ../mixins/news
 include ../components/cat
 include ../components/social
 include ../components/search
+include ../components/check-block
 
 .container
 	.row.main__separator
@@ -34,6 +35,8 @@ include ../components/search
 	.row.main__separator
 		.col-1
 			a.link(href='#') .link
+		.col-2
+			a.link.link_dotted(href='#') .link.link_dotted
 		.col-2
 			a.link.link_gray(href='#') .link.link_gray
 		.col-1
@@ -119,6 +122,10 @@ include ../components/search
 	.row.main__separator
 		.col-12
 			+check-group(check_group)
+
+	.row.main__separator
+		.col-12
+			+check-block(select[2].item)
 
 	.row.main__separator
 		.col-12

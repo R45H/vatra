@@ -10,7 +10,6 @@ $name: check-group;
 		margin-bottom: 5px;
 
 		&:not(:first-child) {
-			margin-left: -1px;
 
 			.check__label {
 				border-top-left-radius: 0;
@@ -19,6 +18,7 @@ $name: check-group;
 		}
 
 		&:not(:last-child) {
+			margin-right: -1px;
 
 			.check__label {
 				border-top-right-radius: 0;

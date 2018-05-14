@@ -42,4 +42,22 @@ $name: main;
 	&__space-top-half {
 		margin-top: 1.5rem;
 	}
+
+	&__fixed-check {
+		display: inline-block;
+		width: 150px;
+		margin-bottom: 5px;
+	}
+
+	&__search-first-col {
+		text-align: center;
+		margin-top: 1.5rem;
+		font-weight: bold;
+
+		@include screen-md() {
+			text-align: right;
+			margin-top: 0;
+			font-weight: normal;
+		}
+	}
 }

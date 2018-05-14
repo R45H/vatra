@@ -1,0 +1,49 @@
+$name: check-block;
+
+.#{$name} {
+
+	@include screen-lg() {
+		display: flex;
+		align-items: center;
+	}
+
+	&__check-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		padding-bottom: 15px;
+
+		@include screen-lg() {
+			width: 465px;
+			padding-bottom: 0;
+			padding-right: 15px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 1px;
+			width: 100%;
+			background: $color-gray;
+
+			@include screen-lg() {
+				height: 100%;
+				width: 1px;
+			}
+		}
+	}
+
+	&__btn-wrap {
+		padding-top: 15px;
+		text-align: center;
+
+		@include screen-lg() {
+			padding-top: 0;
+			padding-left: 15px;
+			margin-bottom: 5px;
+			text-align: left;
+		}
+	}
+}
