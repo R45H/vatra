@@ -1,7 +1,7 @@
 {
 	"card": [
 		{
-			"link": "#",
+			"link": "category.html",
 			"img": "img/content/card/01.jpg",
 			"title": "Декупаж",
 			"manufacturer": "Ласселсбергер",
@@ -9,14 +9,14 @@
 			"price": "616"
 		},
 		{
-			"link": "#",
+			"link": "category.html",
 			"img": "img/content/card/02.jpg",
 			"title": "Дарлингтон",
 			"manufacturer": "Kerama Marazzi",
 			"country": "Россия"
 		},
 		{
-			"link": "#",
+			"link": "category.html",
 			"img": "img/content/card/03.jpg",
 			"title": "Сиена",
 			"manufacturer": "Ласселсбергер",

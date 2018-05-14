@@ -105,6 +105,15 @@ $name: modal;
 		}
 	}
 
+	&__title {
+		text-align: center;
+	}
+
+	&__check {
+		font-size: 11px;
+		color: $color-main;
+	}
+
 	&_lg {
 
 		.#{$name} {
@@ -114,6 +123,20 @@ $name: modal;
 
 				@include screen-sm() {
 					width: 900px;
+				}
+			}
+		}
+	}
+
+	&_sm {
+
+		.#{$name} {
+			// =====
+
+			&__wrap {
+
+				@include screen-sm() {
+					width: 500px;
 				}
 			}
 		}

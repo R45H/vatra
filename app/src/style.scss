@@ -5,7 +5,7 @@
 // =====
 
 // Блоки
-@import 'blocks/map/map'; // Карта
+@import 'blocks/map'; // Карта
 @import 'blocks/link'; // Ссылка
 @import 'blocks/title'; // Заголовок
 @import 'blocks/favourite'; // Кнопка добавления в избранное
@@ -31,6 +31,7 @@
 @import 'blocks/modal/modal'; // Модалка
 @import 'blocks/fog'; // Затемнение
 @import 'blocks/check-list/check-list'; // Список из чекбоксов
+@import 'blocks/gray'; // Серый блок
 /* Blocks will be inserted here */
 // =====
 

@@ -1,4 +1,5 @@
 include ../mixins/check-list
+include ../mixins/check
 
 // MODAL
 #modal.modal.modal_lg
@@ -14,3 +15,26 @@ include ../mixins/check-list
 					each val in check_list
 						.col-sm-6.col-md-4.main__space-bot
 							+check-list(val)
+
+#modalQuestion.modal.modal_sm
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.modal__title Задать вопрос
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form
+				.main__space-bot-half
+					input.input.input_wide(type='text' placeholder='Ваше имя')
+				.main__space-bot-half
+					input.input.input_wide(type='email' placeholder='Ваш email')
+				.main__space-bot-half
+					textarea.input.input_wide(placeholder='Ваш вопрос')
+				.main__space-bot-half
+					+check({
+						value: 'check-modal-1',
+						text: 'Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных'
+					})(class='modal__check')
+				.main__space-bot-half.text-center
+					input.btn(type='submit' placeholder='Отправить')

@@ -1,0 +1,16 @@
+$name: gray;
+
+.#{$name} {
+	background: $color-lighter;
+	padding: 3rem 3.5rem;
+	overflow: hidden;
+
+	&__question {
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&__answer {
+
+	}
+}
