@@ -4,6 +4,7 @@ include ../mixins/fancybox
 include ../mixins/select
 include ../mixins/check
 include ../mixins/check-group
+include ../mixins/check-list
 include ../mixins/news
 include ../components/cat
 include ../components/social
@@ -110,11 +111,16 @@ include ../components/check-block
 		.col-2
 			+check({
 				value: '3',
+				text: '.check.check_partial'
+			})(class='check_partial')
+		.col-2
+			+check({
+				value: '4',
 				text: '.check.check_btn'
 			})(class='check_btn')
 		.col-3
 			+check({
-				value: '4',
+				value: '5',
 				text: '.check.check_btn:checked',
 				checked: true
 			})(class='check_btn')
@@ -126,6 +132,10 @@ include ../components/check-block
 	.row.main__separator
 		.col-12
 			+check-block(select[2].item)
+
+	.row.main__separator
+		.col-4
+			+check-list(check_list[1])
 
 	.row.main__separator
 		.col-12

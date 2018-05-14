@@ -1,0 +1,16 @@
+include ../mixins/check-list
+
+// MODAL
+#modal.modal.modal_lg
+	.modal__wrap
+
+		.modal__head
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			.container-fluid
+				.row
+
+					each val in check_list
+						.col-sm-6.col-md-4.main__space-bot
+							+check-list(val)

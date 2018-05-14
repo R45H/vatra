@@ -14,6 +14,15 @@ $(function() {
 	(function() {
 		//=require 'blocks/filter/filter.js'
 	}());
+	(function() {
+		//=require 'blocks/modal/modal.js'
+	}());
+	(function() {
+		//=require 'blocks/check-list/check-list.js'
+	}());
+	(function() {
+		//=require 'blocks/check/check.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

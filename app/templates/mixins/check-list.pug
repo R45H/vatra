@@ -1,0 +1,17 @@
+include check
+
+mixin check-list(data)
+	.check-list
+		.check-list__title
+			+check({
+				value: 'check-' + data.name + '-' + i,
+				text: data.name
+			})
+		.check-list__list
+
+			each val in data.list
+				.check-list__item
+					+check({
+						value: 'check-' + val + '-' + i,
+						text: val
+					})

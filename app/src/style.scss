@@ -20,7 +20,7 @@
 @import 'blocks/fancybox'; // Всплывающее изображение
 @import 'blocks/select/select'; // Кастомный селект
 @import 'blocks/input'; // Поле ввода
-@import 'blocks/check'; // Чекбокс
+@import 'blocks/check/check'; // Чекбокс
 @import 'blocks/check-group'; // Группа из чекбоксов в виде кнопок
 @import 'blocks/search/search'; // Поиск
 @import 'blocks/news'; // Новость
@@ -28,6 +28,9 @@
 @import 'blocks/img'; // Картинка
 @import 'blocks/filter/filter'; // Блок с фильтром
 @import 'blocks/check-block'; // Блок с чекбоксами и ссылкой
+@import 'blocks/modal/modal'; // Модалка
+@import 'blocks/fog'; // Затемнение
+@import 'blocks/check-list/check-list'; // Список из чекбоксов
 /* Blocks will be inserted here */
 // =====
 

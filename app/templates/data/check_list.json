@@ -1,0 +1,59 @@
+{
+	"check_list": [
+		{
+			"name": "Испания",
+			"list": [
+				"MAINZU",
+				"PORCELANITE DOS",
+				"LA PLATERA",
+				"PERONDA (Испания)",
+				"AZULEJOS BORJA",
+				"ARGENTA CERAMICA",
+				"KEROS",
+				"PAMESA",
+				"APARICI",
+				"METROPOL KERAMIKA S-L",
+				"CICOGRES",
+				"WOW",
+				"NATUCER",
+				"SALONI",
+				"MONOPOLE",
+				"LATINA",
+				"PLAZA",
+				"EL MOLINO (Испания)"
+			]
+		},
+		{
+			"name": "Россия",
+			"list": [
+				"CEROSSA",
+				"KERAMA MARAZZI",
+				"VITRA",
+				"Ласселсбергер",
+				"М-КВАДРАТ",
+				"ITALON",
+				"AZORI (Россия) (больше не работаем с фабрикой)"
+			]
+		},
+		{
+			"name": "Италия",
+			"list": [
+				"MARCA CORONA",
+				"FILA",
+				"IMOLA ( Италия)",
+				"DEL CONCA (Италия)",
+				"GAMBARELLI (Италия)",
+				"SERENISSIMA CIR (Италия)",
+				"ALTA",
+				"HERBERIA (Италия)",
+				"KEOPE (Италия)",
+				"SERENISSIMA CAPRI (Италия)",
+				"BRENNERO",
+				"PAUL CERAMICHE (Италия) (больше не работаем)",
+				"RAGNO",
+				"EPOCA CERAMICHE (Италия)",
+				"UNICOMSTARKER (Италия)"
+			]
+		}
+	]
+}

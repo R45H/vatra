@@ -1,0 +1,16 @@
+$name: check-list;
+
+.#{$name} {
+
+	&__title {
+		margin-bottom: 5px;
+	}
+
+	&__list {
+		padding-left: 15px;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+	}
+}

@@ -60,4 +60,15 @@ $name: check;
 			}
 		}
 	}
+
+	&_partial {
+
+		.#{$name}__label {
+			color: $color-main;
+
+			&::before {
+				content: '\f0c8';
+			}
+		}
+	}
 }
