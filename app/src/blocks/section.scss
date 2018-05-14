@@ -3,6 +3,13 @@ $name: section;
 .#{$name} {
 	padding: 3rem 0;
 
+	&::after {
+		content: '';
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+
 	&:last-child {
 		padding-bottom: 6rem;
 	}
