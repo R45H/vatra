@@ -9,7 +9,7 @@ module.exports = function(options) {
 
 		var
 			name = $.util.env.name || $.util.env.n || options.name, // Имя блока
-			comment = $.util.env.comment || $.util.env.cmt, // Комментарий для SCSS инклюда
+			comment = $.util.env.comment || $.util.env.cmt || $.util.env.t, // Комментарий для SCSS инклюда
 
 			dirBlocks = options.dirBlocks, // Полный путь до папки с блоками
 			dirTemp = options.dirTemp, // Полный путь до папки с вёрсткой

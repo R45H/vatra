@@ -1,6 +1,6 @@
 mixin select(data, opts)
 	.select(class= opts && opts.wide ? 'select_wide' : '')
-		select.select__origin(class= opts && opts.colors ? 'select__origin_colors' : '')
+		select.select__origin(class= data[1] && data[1].color ? 'select__origin_colors' : '')
 
 			each val in data
 				option(

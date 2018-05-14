@@ -11,6 +11,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/search/search.js'
 	}());
+	(function() {
+		//=require 'blocks/filter/filter.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

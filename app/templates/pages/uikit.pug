@@ -54,11 +54,13 @@ include ../components/search
 		.col-2.main__space-col
 			button.btn button.btn
 		.col-2.main__space-col
-			.btn.btn_gray .btn.btn_gray
-		.col-2.main__space-col
 			.btn.btn_sm .btn.btn_sm
 		.col-2.main__space-col
+			.btn.btn_text-sm .btn.btn_text-sm
+		.col-2.main__space-col
 			.btn.btn_wide .btn.btn_wide
+		.col-2.main__space-col
+			.btn.btn_gray .btn.btn_gray
 		.col-3
 			.btn.btn_lightgray .btn.btn_lightgray
 
@@ -88,9 +90,7 @@ include ../components/search
 				wide: true
 			})
 		.col-2
-			+select(select[1].item, {
-				colors: true
-			})
+			+select(select[1].item)
 
 	.row.main__separator
 		.col-2

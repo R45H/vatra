@@ -1,18 +1,18 @@
 {
 	"g_menu": [
 		{
-			"link": "#",
+			"link": "catalog.html",
 			"name": "Каталог",
 			"sub": [
-				{"link": "#", "name": "Плитка для кухни"},
-				{"link": "#", "name": "Плитка для ванной"},
-				{"link": "#", "name": "Плитка для пола"},
-				{"link": "#", "name": "Керамогранит"},
-				{"link": "#", "name": "Ступени"}
+				{"link": "catalog.html", "name": "Плитка для кухни"},
+				{"link": "catalog.html", "name": "Плитка для ванной"},
+				{"link": "catalog.html", "name": "Плитка для пола"},
+				{"link": "catalog.html", "name": "Керамогранит"},
+				{"link": "catalog.html", "name": "Ступени"}
 			]
 		},
-		{"link": "#", "name": "Акции"},
-		{"link": "#", "name": "Распродажа"},
+		{"link": "action.html", "name": "Акции"},
+		{"link": "action.html", "name": "Распродажа"},
 		{"link": "#", "name": "Производители"},
 		{"link": "news.html", "name": "Новости"},
 		{"link": "#", "name": "Оплата и доставка"},

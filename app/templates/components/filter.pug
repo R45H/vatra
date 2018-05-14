@@ -1,0 +1,46 @@
+include ../mixins/card
+include ../mixins/select
+
+mixin filter(data)
+	.filter
+		.container
+
+			if data && data.select
+				.row
+
+					each val in select
+						.col-md-4.col-lg-3.col-xxl-2.main__space-bot
+							+select(val.item, {
+								wide: true
+							})
+
+					each val in ['Сбросить фильтр', 'Показать результаты']
+						.col-md-4.col-lg-3.col-xxl-2.main__space-bot
+							a.btn.btn_wide.btn_text-sm.btn_lightgray(href='#')= val
+
+				.filter__btns-wrap
+					.main__space-bot
+						.title.filter__toggle.filter__toggle_active 351 интерьеров
+							.filter__view-btn.filter__view-btn_four.filter__view-btn_active
+							.filter__view-btn.filter__view-btn_one
+						.title.filter__toggle 2420 элементов
+
+					.main__space-bot
+						a.link(href='#') Расширенный подбор плитки
+							i.fa.fa-long-arrow-right.link__arrow-right
+
+			.row
+
+				- var j = k = 0;
+				each val, i in card
+					.col-sm-6.main__space-col(class= k && (!(k % 2) || !(k % 3) || !(k % 4)) ? 'col-lg-4' : '')
+						+card(val)
+
+					if !card[i + 1]
+						- i = -1;
+
+					if ++j == 10
+						- break;
+
+					if ++k == 5
+						- k = 0;
