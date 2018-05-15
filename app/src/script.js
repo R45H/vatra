@@ -23,6 +23,12 @@ $(function() {
 	(function() {
 		//=require 'blocks/check/check.js'
 	}());
+	(function() {
+		//=require 'blocks/item/item.js'
+	}());
+	(function() {
+		//=require 'blocks/num/num.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

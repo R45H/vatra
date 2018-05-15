@@ -1,0 +1,67 @@
+{
+	"item": [
+		{
+			"link": "#",
+			"img": "img/content/item/25x75.jpg",
+			"title": "12080R Искья бирюзовый светлый обрезной 25х75",
+			"price": 2600,
+			"old_price": 3100,
+			"size": {
+				"width": 300,
+				"height": 100
+			},
+			"params": [
+				{"name": "Назначение", "value": "Ванная"},
+				{"name": "Цвет", "value": "Разноцветный"},
+				{"name": "Поверхность", "value": "Глянцевая"}
+			]
+		},
+		{
+			"link": "#",
+			"img": "img/content/item/9x9.jpg",
+			"title": "1267S Сансеверо белый 9,9х9,9",
+			"price": 2600,
+			"size": {
+				"width": 36,
+				"height": 36
+			},
+			"params": [
+				{"name": "Назначение", "value": "Ванная"},
+				{"name": "Цвет", "value": "Разноцветный"},
+				{"name": "Поверхность", "value": "Глянцевая"}
+			]
+		},
+		{
+			"link": "#",
+			"img": "img/content/item/15x90.jpg",
+			"title": "Golden Sunset Ret 15х90",
+			"price": 2600,
+			"old_price": 3100,
+			"size": {
+				"width": 60,
+				"height": 360
+			},
+			"params": [
+				{"name": "Назначение", "value": "Ванная"},
+				{"name": "Цвет", "value": "Разноцветный"},
+				{"name": "Поверхность", "value": "Глянцевая"}
+			]
+		},
+		{
+			"link": "#",
+			"img": "img/content/item/20x20.jpg",
+			"title": "Pietro di Volta Viola 20х20 (1,12)",
+			"price": 2600,
+			"old_price": 3100,
+			"size": {
+				"width": 80,
+				"height": 80
+			},
+			"params": [
+				{"name": "Назначение", "value": "Ванная"},
+				{"name": "Цвет", "value": "Разноцветный"},
+				{"name": "Поверхность", "value": "Глянцевая"}
+			]
+		}
+	]
+}

@@ -6,11 +6,13 @@ include ../mixins/check
 include ../mixins/check-group
 include ../mixins/check-list
 include ../mixins/news
+include ../mixins/item
 include ../components/slider
 include ../components/cat
 include ../components/social
 include ../components/search
 include ../components/check-block
+include ../components/num
 
 .container
 	.row.main__separator
@@ -143,6 +145,10 @@ include ../components/check-block
 			include ../components/logo
 
 	.row.main__separator
+		.col-12
+			+num
+
+	.row.main__separator
 		.col-1
 			a.favourite(href='#')
 		.col-1
@@ -178,6 +184,12 @@ include ../components/check-block
 		.col-6
 			.container
 				+slider(class='slider_dots')
+
+	.row.main__separator
+		.col-4
+			+item(item[1])
+		.col-4
+			+item(item[0])
 
 	.row.main__separator
 		.col-3

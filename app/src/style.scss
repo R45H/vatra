@@ -10,7 +10,7 @@
 @import 'blocks/title'; // Заголовок
 @import 'blocks/favourite'; // Кнопка добавления в избранное
 @import 'blocks/btn'; // Кнопка
-@import 'blocks/card'; // Карточка товара
+@import 'blocks/card'; // Карточка категории
 @import 'blocks/text'; // Текстовый блок
 @import 'blocks/cat'; // Категория
 @import 'blocks/count'; // Счётчик с иконкой
@@ -32,6 +32,8 @@
 @import 'blocks/fog'; // Затемнение
 @import 'blocks/check-list/check-list'; // Список из чекбоксов
 @import 'blocks/gray'; // Серый блок
+@import 'blocks/num/num'; // Счётчик
+@import 'blocks/item/item'; // Карточка товара
 /* Blocks will be inserted here */
 // =====
 
