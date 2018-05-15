@@ -6,6 +6,7 @@ include ../mixins/check
 include ../mixins/check-group
 include ../mixins/check-list
 include ../mixins/news
+include ../components/slider
 include ../components/cat
 include ../components/social
 include ../components/search
@@ -171,9 +172,12 @@ include ../components/check-block
 			+cat-icon(cat_icon[0])
 
 	.row.main__separator
-		.col-8
+		.col-6
 			.container
-				include ../components/slider
+				+slider
+		.col-6
+			.container
+				+slider(class='slider_dots')
 
 	.row.main__separator
 		.col-3

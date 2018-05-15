@@ -26,7 +26,7 @@ $name: slider;
 	}
 
 	&__img {
-		padding-bottom: 50%;
+		padding-bottom: 74%;
 		background: no-repeat center / cover;
 	}
 
@@ -41,10 +41,6 @@ $name: slider;
 		bottom: 0;
 		opacity: 0;
 		transition: opacity $duration ease;
-
-		@include screen-sm() {
-			bottom: 54px;
-		}
 
 		&::after {
 			font-family: $font-fa;
@@ -119,5 +115,23 @@ $name: slider;
 		border-radius: 50%;
 		background: $color-text;
 		display: block;
+	}
+
+	&_dots {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				padding-bottom: 50%;
+			}
+
+			&__arrow {
+
+				@include screen-sm() {
+					bottom: 54px;
+				}
+			}
+		}
 	}
 }

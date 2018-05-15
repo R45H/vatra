@@ -1,8 +1,21 @@
+include ../components/slider
+
 .section.section_space-bot_none
 	.container
 		a.link(href='catalog.html')
 			i.fa.fa-long-arrow-left.link__arrow-left
 			| К результатам подбора
+
+.section
+	.container
+		.row
+
+			.col-8
+				+slider
+
+			.col-4
+				h1.title.title_sm Livorno
+					a.favourite(href='#')
 
 .section.section_space-bot_none
 	.container

@@ -12,8 +12,7 @@ $sliders.each(function() {
 
 	if ($items.length < 2) return;
 
-	$this.slick({
-		dots: true,
+	var config = {
 		dotsClass: classDots,
 		autoplay: true,
 		autoplaySpeed: 3000,
@@ -31,5 +30,11 @@ $sliders.each(function() {
 				}
 			}
 		]
-	})
+	};
+
+	if ($this.hasClass(classSlider + '_dots')) {
+		config.dots = true;
+	}
+
+	$this.slick(config);
 });
