@@ -33,13 +33,13 @@
 		},
 		{
 			"link": "#",
-			"img": "img/content/item/15x90.jpg",
-			"title": "Golden Sunset Ret 15х90",
+			"img": "img/content/item/20x20.jpg",
+			"title": "Pietro di Volta Viola 20х20 (1,12)",
 			"price": 2600,
 			"old_price": 3100,
 			"size": {
-				"width": 60,
-				"height": 360
+				"width": 80,
+				"height": 80
 			},
 			"params": [
 				{"name": "Назначение", "value": "Ванная"},
@@ -49,13 +49,13 @@
 		},
 		{
 			"link": "#",
-			"img": "img/content/item/20x20.jpg",
-			"title": "Pietro di Volta Viola 20х20 (1,12)",
+			"img": "img/content/item/15x90.jpg",
+			"title": "Golden Sunset Ret 15х90",
 			"price": 2600,
 			"old_price": 3100,
 			"size": {
-				"width": 80,
-				"height": 80
+				"width": 60,
+				"height": 360
 			},
 			"params": [
 				{"name": "Назначение", "value": "Ванная"},

@@ -1,0 +1,31 @@
+$name: detail;
+
+.#{$name} {
+
+	&__title-wrap {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__favourite {
+		margin-left: 15px;
+	}
+
+	&__list-item {
+		margin-bottom: 15px;
+	}
+
+	&__list-title {
+		font-weight: bold;
+
+		&_upper {
+			text-transform: uppercase;
+		}
+	}
+
+	&__list-value {
+		padding-left: 15px;
+	}
+}

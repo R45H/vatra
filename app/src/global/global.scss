@@ -78,6 +78,9 @@ p {
 
 hr {
 	margin: 0;
+	border: none;
+	height: 1px;
+	background: $color-light;
 }
 
 video,

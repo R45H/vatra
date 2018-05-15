@@ -8,8 +8,13 @@ $name: item;
 
 	&__text-wrap {
 		display: flex;
+		flex-direction: column;
 		background: $color-lighter;
 		padding: 15px;
+
+		@include screen-sm() {
+			flex-direction: row;
+		}
 	}
 
 	&__img-wrap {
@@ -18,14 +23,26 @@ $name: item;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+		}
 	}
 
 	&__text-col {
 		flex: auto;
+	}
 
-		&_fixed {
-			flex: none;
+	&__btns-wrap {
+		padding-top: 15px;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+			padding-top: 0;
 			padding-left: 15px;
+			flex: none;
 		}
 	}
 
@@ -65,20 +82,40 @@ $name: item;
 	&__price-wrap {
 		display: flex;
 		align-items: flex-end;
+		justify-content: center;
+
+		@include screen-sm() {
+			justify-content: flex-start;
+		}
+	}
+
+	&__price-col {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include screen-sm() {
+			display: block;
+		}
 	}
 
 	&__favourite {
 		display: block;
 		margin-left: 10px;
+		flex: none;
 	}
 
 	&__old-price {
 		text-decoration: line-through;
 		color: $color-gray;
 		font-size: 14px;
-		margin-bottom: 5px;
+		margin-right: 10px;
 		text-align: right;
 		white-space: nowrap;
+
+		@include screen-sm() {
+			margin-bottom: 5px;
+			margin-right: 0;
+		}
 	}
 
 	&__price {
@@ -139,11 +176,12 @@ $name: item;
 		color: $color-second;
 		margin-right: 15px;
 		outline: none;
+		transition: $duration / 2 ease;
 
 		&:last-child {
 			margin-right: 0;
 		}
-		
+
 		&:hover {
 			color: $color-main;
 		}
