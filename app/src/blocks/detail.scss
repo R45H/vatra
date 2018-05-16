@@ -50,11 +50,6 @@ $name: detail;
 		padding-left: 15px;
 	}
 
-	&__more {
-		align-self: center;
-		text-align: center;
-	}
-
 	&__num-wrap {
 		display: flex;
 		align-items: baseline;
@@ -71,16 +66,9 @@ $name: detail;
 
 	&__old-price {
 		font-size: 16px;
-		text-decoration: line-through;
-		color: $color-gray;
 	}
 
 	&__price {
 		font-size: 25px;
-		line-height: 1;
-
-		&_strong {
-			@extend .item__price_strong;
-		}
 	}
 }

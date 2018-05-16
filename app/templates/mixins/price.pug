@@ -1,0 +1,10 @@
+mixin price(data)
+	.price(
+		class= data.strong ? 'price_strong' : ''
+		class= data.old ? 'price_old' : ''
+		class= attributes.class
+	)= data.price + ' '
+		i.fa.fa-rub
+		|
+		| / м
+		sup 2

@@ -10,8 +10,8 @@ $name: item;
 	&__text-wrap {
 		display: flex;
 		flex-direction: column;
-		background: $color-lighter;
 		padding: 15px;
+		border-top: 1px solid $color-lighter;
 
 		@include screen-sm() {
 			flex-direction: row;
@@ -21,18 +21,13 @@ $name: item;
 	&__img-wrap {
 		padding: 15px;
 		flex: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		text-align: center;
-
-		@include screen-sm() {
-			text-align: left;
-		}
 	}
 
 	&__text-col {
 		flex: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__btns-wrap {
@@ -40,7 +35,7 @@ $name: item;
 		text-align: center;
 
 		@include screen-sm() {
-			text-align: left;
+			text-align: right;
 			padding-top: 0;
 			padding-left: 15px;
 			flex: none;
@@ -107,9 +102,6 @@ $name: item;
 	}
 
 	&__old-price {
-		text-decoration: line-through;
-		color: $color-gray;
-		font-size: 14px;
 		margin-right: 10px;
 		text-align: right;
 		white-space: nowrap;
@@ -121,15 +113,8 @@ $name: item;
 	}
 
 	&__price {
-		font-size: 20px;
-		line-height: 1;
 		text-align: right;
 		white-space: nowrap;
-
-		&_strong {
-			font-weight: bold;
-			color: $color-main;
-		}
 	}
 
 	&__img-link {
@@ -175,25 +160,6 @@ $name: item;
 
 	&__link {
 		font-size: 14px;
-		color: $color-second;
-		margin-right: 15px;
 		outline: none;
-		transition: $duration / 2 ease;
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		&:hover {
-			color: $color-main;
-		}
-
-		&_more {
-
-		}
-
-		&_zoom {
-
-		}
 	}
 }

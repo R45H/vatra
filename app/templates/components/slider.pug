@@ -1,11 +1,22 @@
-mixin slider
+mixin slider(data)
 	.slider(class= attributes.class)
 
-		each val in slider
-			a.slider__item(href= val.link)
+		if data && data.alone
+			.slider__item
 				.slider__img(
-					style='background-image: url(' + val.img + ');'
+					style='background-image: url(' + slider[0].img + ');'
 					role='img'
-					aria-label= val.title
-					title= val.title
+					aria-label= slider[0].title
+					title= slider[0].title
 				)
+
+		else
+
+			each val in slider
+				a.slider__item(href= val.link)
+					.slider__img(
+						style='background-image: url(' + val.img + ');'
+						role='img'
+						aria-label= val.title
+						title= val.title
+					)

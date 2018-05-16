@@ -7,6 +7,7 @@ include ../mixins/check-group
 include ../mixins/check-list
 include ../mixins/news
 include ../mixins/item
+include ../mixins/price
 include ../components/slider
 include ../components/cat
 include ../components/social
@@ -168,6 +169,22 @@ include ../components/detail
 	.row.main__separator
 		.col-4
 			.discount .discount
+
+	.row.main__separator
+		.col-2
+			+price({
+				price: 2018
+			})
+		.col-2
+			+price({
+				price: 2018,
+				old: true
+			})
+		.col-2
+			+price({
+				price: 2018,
+				strong: true
+			})
 
 	.row.main__separator
 		each val in card

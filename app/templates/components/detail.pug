@@ -8,7 +8,9 @@ mixin detail(data)
 			.row
 
 				.col-md-6.col-lg-8.main__space-col
-					+slider(class= data.detail ? 'slider_contain' : '')
+					+slider({
+						alone: true
+					})(class= data.detail ? 'slider_contain' : '')
 
 				.col-md-6.col-lg-4.main__space-col
 					.detail__title-wrap
@@ -30,18 +32,16 @@ mixin detail(data)
 
 							if item[0].old_price
 								.detail__list-item
-									.detail__old-price= item[0].old_price + ' '
-										i.fa.fa-rub
-										|
-										| / м
-										sup 2
+									+price({
+										price: item[0].old_price,
+										old: true
+									})(class='detail__old-price')
 
 							.detail__list-item
-								.detail__price(class= item[0].old_price ? 'detail__price_strong' : '')= item[0].price + ' '
-									i.fa.fa-rub
-									|
-									| / м
-									sup 2
+								+price({
+									price: item[0].price,
+									strong: item[0].old_price
+								})(class='detail__price')
 
 							.detail__list-item
 								.detail__num-wrap
@@ -63,8 +63,3 @@ mixin detail(data)
 					each val in item
 						.col-lg-6.col-xxl-4.main__space-col
 							+item(val)
-
-					if data.more_btn
-						.col-lg-6.col-xxl-4.main__space-col.detail__more
-							a.link(href='#') Ещё 17 товаров
-								i.fa.fa-long-arrow-right.link__arrow-right

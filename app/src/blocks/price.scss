@@ -1,0 +1,16 @@
+$name: price;
+
+.#{$name} {
+	font-size: 20px;
+	line-height: 1;
+
+	&_old {
+		text-decoration: line-through;
+		font-size: 14px;
+	}
+
+	&_strong {
+		font-weight: bold;
+		color: $color-main;
+	}
+}

@@ -33,17 +33,11 @@ $name: text;
 
 	ul,
 	ol {
-		list-style-type: none;
 		margin: 1em 0;
+		padding-left: 2em;
 
 		> li {
-			position: relative;
-			padding-left: 2em;
 			margin: .5em 0;
-
-			&::before {
-				position: absolute;
-			}
 		}
 
 		ul,
@@ -78,39 +72,6 @@ $name: text;
 				&:last-child {
 					margin-bottom: 0;
 				}
-			}
-		}
-	}
-
-	ul {
-
-		> li {
-
-			&::before {
-				content: '';
-				width: 6px;
-				height: 6px;
-				left: .7em;
-				top: .7em;
-				background: $color-second;
-				border-radius: 50%;
-			}
-		}
-	}
-
-	ol {
-		counter-reset: list 0;
-
-		> li {
-
-			&::before {
-				counter-increment: list;
-				content: counter(list) '. ';
-				width: 1em;
-				color: $color-second;
-				font-weight: bold;
-				user-select: none;
-				left: .6em;
 			}
 		}
 	}

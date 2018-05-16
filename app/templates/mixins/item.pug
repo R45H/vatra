@@ -1,44 +1,9 @@
 include fancybox
+include price
 include ../components/num
 
 mixin item(data)
 	.item
-		.item__text-wrap
-
-			.item__text-col
-				a.link.link_gray.item__title(href= data.link)= data.title
-				ul.item__params
-
-					each val in data.params
-						li.item__param
-							span.item__param-name= val.name + ': '
-							span.item__param-val= val.value
-
-			.item__text-col.item__btns-wrap
-				.item__row
-
-					.item__price-wrap
-						.item__price-col
-
-							if data.old_price
-								.item__old-price= data.old_price + ' '
-									i.fa.fa-rub
-									|
-									| / м
-									sup 2
-
-							.item__price(class= data.old_price ? 'item__price_strong' : '')= data.price + ' '
-								i.fa.fa-rub
-								|
-								| / м
-								sup 2
-
-						a.favourite.item__favourite(href='#')
-
-				.item__row
-					+num
-				.item__row
-					a.btn.btn_wide(href='#') В корзину
 
 		.item__img-wrap
 
@@ -56,12 +21,46 @@ mixin item(data)
 						title= data.title
 					)
 
-			.item__row
-				a.item__link.item__link_more(href= data.link)
-					i.fa.fa-info-circle
-					|
-					| Подробнее
-				a.item__link.item__link_zoom(href='#')
-					i.fa.fa-plus-circle
-					|
-					| Увеличить
+		.item__text-wrap
+
+			.item__text-col
+
+				.item__row
+
+					a.link.link_gray.item__title(href= data.link)= data.title
+					ul.item__params
+
+						each val in data.params
+							li.item__param
+								span.item__param-name= val.name + ': '
+								span.item__param-val= val.value
+
+				.item__row
+					a.link.item__link(href= data.link)
+						i.fa.fa-info-circle
+						|
+						| Подробнее
+
+			.item__text-col.item__btns-wrap
+				.item__row
+
+					.item__price-wrap
+						.item__price-col
+
+							if data.old_price
+								+price({
+									price: data.old_price,
+									old: true
+								})(class='item__old-price')
+
+							+price({
+								price: data.price,
+								strong: data.old_price
+							})(class='item__price')
+
+						a.favourite.item__favourite(href='#')
+
+				.item__row
+					+num
+				.item__row
+					a.btn.btn_wide(href='#') В корзину

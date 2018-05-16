@@ -10,6 +10,7 @@
 @import 'blocks/title'; // Заголовок
 @import 'blocks/favourite'; // Кнопка добавления в избранное
 @import 'blocks/btn'; // Кнопка
+@import 'blocks/price'; // Блок с ценой
 @import 'blocks/card'; // Карточка категории
 @import 'blocks/text'; // Текстовый блок
 @import 'blocks/cat'; // Категория
@@ -33,7 +34,7 @@
 @import 'blocks/check-list/check-list'; // Список из чекбоксов
 @import 'blocks/gray'; // Серый блок
 @import 'blocks/num/num'; // Счётчик
-@import 'blocks/item/item'; // Карточка товара
+@import 'blocks/item'; // Карточка товара
 @import 'blocks/detail'; // Детальная карточка категории
 @import 'blocks/discount'; // Плашка со скидкой
 @import 'blocks/slider-sm/slider-sm'; // Слайдер с несколькими колонками

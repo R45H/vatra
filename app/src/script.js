@@ -24,9 +24,6 @@ $(function() {
 		//=require 'blocks/check/check.js'
 	}());
 	(function() {
-		//=require 'blocks/item/item.js'
-	}());
-	(function() {
 		//=require 'blocks/num/num.js'
 	}());
 	(function() {
