@@ -1,4 +1,4 @@
-$name: slider;
+$name: slider-sm;
 
 .#{$name} {
 
@@ -23,6 +23,7 @@ $name: slider;
 	&__item {
 		outline: none;
 		display: block;
+		padding: 0 15px;
 	}
 
 	&__img {
@@ -33,14 +34,19 @@ $name: slider;
 	&__arrow {
 		position: absolute;
 		z-index: 1;
-		width: 10%;
+		width: 30px;
 		cursor: pointer;
 		font-size: 5rem;
-		color: white;
+		color: $color-text;
+		background: $color-lighter;
 		top: 0;
 		bottom: 0;
 		opacity: 0;
 		transition: opacity $duration ease;
+
+		@include screen-sm() {
+			bottom: 54px;
+		}
 
 		&::after {
 			font-family: $font-fa;
@@ -56,8 +62,7 @@ $name: slider;
 		}
 
 		&_prev {
-			left: 0;
-			background: linear-gradient(to right, rgba($color-text, .3) 0%, rgba($color-text, .3) 50%, transparent 100%);
+			left: -15px;
 
 			&::after {
 				content: '\f104';
@@ -65,8 +70,7 @@ $name: slider;
 		}
 
 		&_next {
-			right: 0;
-			background: linear-gradient(to left, rgba($color-text, .3) 0%, rgba($color-text, .3) 50%, transparent 100%);
+			right: -15px;
 
 			&::after {
 				content: '\f105';
@@ -131,17 +135,6 @@ $name: slider;
 				@include screen-sm() {
 					bottom: 54px;
 				}
-			}
-		}
-	}
-
-	&_contain {
-
-		.#{$name} {
-			// =====
-
-			&__img {
-				background-size: contain;
 			}
 		}
 	}

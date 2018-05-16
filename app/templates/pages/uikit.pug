@@ -179,6 +179,12 @@ include ../components/detail
 			+cat(cat[0])
 
 	.row.main__separator
+		.col-4
+			+item(item[1])
+		.col-4
+			+item(item[0])
+
+	.row.main__separator
 		.col-2
 			+cat-icon(cat_icon[0])
 
@@ -191,10 +197,9 @@ include ../components/detail
 				+slider(class='slider_dots')
 
 	.row.main__separator
-		.col-4
-			+item(item[1])
-		.col-4
-			+item(item[0])
+		.col-12
+			.container
+				+slider-sm(item)
 
 	.row.main__separator
 		.col-3
@@ -219,7 +224,8 @@ include ../components/detail
 		.col-12
 			include ../components/map
 
+	.row.main__space-bot
+		+detail(detail[0])
+
 	.row.main__separator
-		+detail({
-			more: true
-		})
+		+detail(detail[1])

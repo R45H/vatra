@@ -1,4 +1,5 @@
 include ../components/slider
+include ../components/slider-sm
 include ../mixins/item
 
 mixin detail(data)
@@ -7,42 +8,63 @@ mixin detail(data)
 			.row
 
 				.col-md-6.col-lg-8.main__space-col
-					+slider
+					+slider(class= data.detail ? 'slider_contain' : '')
 
 				.col-md-6.col-lg-4.main__space-col
 					.detail__title-wrap
 						h1.title.title_sm= card[0].title
 						a.favourite.detail__favourite(href='#')
 
-					.detail__list
+					.detail__list(class= data.detail ? 'detail__list_table' : '')
 
-						.detail__list-item
-							.detail__list-title.detail__list-title_upper Mainzu, Испания
+						if data.list
+							each val in data.list
+								.detail__list-item
+									.detail__list-title(class= val.upper ? 'detail__list-title_upper' : '')!= val.title
 
-						.detail__list-item
-							.detail__list-title Материал:
-							.detail__list-value Керамогранит
+									if val.value
+										.detail__list-value!= val.value
 
-						.detail__list-item
-							.detail__list-title Стоимость:
-							.detail__list-value= 'от 2192 '
-								i.fa.fa-rub
-								|/шт
+					if data.detail
+						.detail__price-wrap
 
-						.detail__list-item
-							.detail__list-title Описание:
-							.detail__list-value Коллекция искусственно состаренной плитки Mainzu Livorno (Испания) с характерной текстурой и необычной рельефной фактурой создает атмосферу домашнего уюта и надежности камня, испытанного временем.
+							if item[0].old_price
+								.detail__list-item
+									.detail__old-price= item[0].old_price + ' '
+										i.fa.fa-rub
+										|
+										| / м
+										sup 2
 
-						.detail__list-item
-							.discount Sale
+							.detail__list-item
+								.detail__price(class= item[0].old_price ? 'detail__price_strong' : '')= item[0].price + ' '
+									i.fa.fa-rub
+									|
+									| / м
+									sup 2
+
+							.detail__list-item
+								.detail__num-wrap
+									+num
+									.detail__num-desc м<sup>2</sup>, округлено, кратно упаковке 1 м<sup>2</sup>
+
+							.detail__list-item
+								a.btn(href='#') В корзину
 
 			.row
 
-				each val in item
-					.col-lg-6.col-xxl-4.main__space-col
-						+item(val)
+				if data.detail
+					.col
+						h3.title.title_sm.main__space-bot-half Похожие:
+						+slider-sm(item)
 
-				if data && data.more
-					.col-lg-6.col-xxl-4.main__space-col.detail__more
-						a.link(href='#') Ещё 17 товаров
-							i.fa.fa-long-arrow-right.link__arrow-right
+				else
+
+					each val in item
+						.col-lg-6.col-xxl-4.main__space-col
+							+item(val)
+
+					if data.more_btn
+						.col-lg-6.col-xxl-4.main__space-col.detail__more
+							a.link(href='#') Ещё 17 товаров
+								i.fa.fa-long-arrow-right.link__arrow-right

@@ -1,12 +1,12 @@
 {
 	"cat_icon": [
 		{
-			"link": "#",
+			"link": "catalog.html",
 			"title": "Каталог",
 			"img": "img/icons/cat-icon/01.png"
 		},
 		{
-			"link": "#",
+			"link": "action.html",
 			"title": "Акции",
 			"img": "img/icons/cat-icon/02.png"
 		},

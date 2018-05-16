@@ -1,0 +1,8 @@
+include ../mixins/item
+
+mixin slider-sm(data)
+	.slider-sm(class= attributes.class)
+
+		each val in data
+			.slider-sm__item
+				+item(val)
