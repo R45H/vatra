@@ -1,0 +1,14 @@
+$name: discount;
+
+.#{$name} {
+	width: 126px;
+	height: 63px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: url($path + 'img/icons/discount.png') no-repeat center / contain;
+	color: white;
+	font-weight: bold;
+	padding-bottom: 13px;
+	padding-left: 30px;
+}
