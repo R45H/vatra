@@ -1,39 +1,45 @@
 include ../components/slider
 include ../mixins/item
 
-.detail
-	.container
-		.row
+mixin detail(data)
+	.detail
+		.container
+			.row
 
-			.col-md-6.col-lg-8.main__space-col
-				+slider
+				.col-md-6.col-lg-8.main__space-col
+					+slider
 
-			.col-md-6.col-lg-4.main__space-col
-				.detail__title-wrap
-					h1.title.title_sm= card[0].title
-					a.favourite.detail__favourite(href='#')
+				.col-md-6.col-lg-4.main__space-col
+					.detail__title-wrap
+						h1.title.title_sm= card[0].title
+						a.favourite.detail__favourite(href='#')
 
-				.detail__list
+					.detail__list
 
-					.detail__list-item
-						.detail__list-title.detail__list-title_upper Mainzu, Испания
+						.detail__list-item
+							.detail__list-title.detail__list-title_upper Mainzu, Испания
 
-					.detail__list-item
-						.detail__list-title Материал:
-						.detail__list-value Керамогранит
+						.detail__list-item
+							.detail__list-title Материал:
+							.detail__list-value Керамогранит
 
-					.detail__list-item
-						.detail__list-title Стоимость:
-						.detail__list-value= 'от 2192 '
-							i.fa.fa-rub
-							|/шт
+						.detail__list-item
+							.detail__list-title Стоимость:
+							.detail__list-value= 'от 2192 '
+								i.fa.fa-rub
+								|/шт
 
-					.detail__list-item
-						.detail__list-title Описание:
-						.detail__list-value Коллекция искусственно состаренной плитки Mainzu Livorno (Испания) с характерной текстурой и необычной рельефной фактурой создает атмосферу домашнего уюта и надежности камня, испытанного временем.
+						.detail__list-item
+							.detail__list-title Описание:
+							.detail__list-value Коллекция искусственно состаренной плитки Mainzu Livorno (Испания) с характерной текстурой и необычной рельефной фактурой создает атмосферу домашнего уюта и надежности камня, испытанного временем.
 
-		.row
+			.row
 
-			each val in item
-				.col-lg-6.col-xxl-4.main__space-col
-					+item(val)
+				each val in item
+					.col-lg-6.col-xxl-4.main__space-col
+						+item(val)
+
+				if data && data.more
+					.col-lg-6.col-xxl-4.main__space-col.detail__more
+						a.link(href='#') Ещё 17 товаров
+							i.fa.fa-long-arrow-right.link__arrow-right

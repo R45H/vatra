@@ -13,6 +13,7 @@ include ../components/social
 include ../components/search
 include ../components/check-block
 include ../components/num
+include ../components/detail
 
 .container
 	.row.main__separator
@@ -213,3 +214,8 @@ include ../components/num
 	.row.main__separator
 		.col-12
 			include ../components/map
+
+	.row.main__separator
+		+detail({
+			more: true
+		})

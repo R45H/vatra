@@ -2,6 +2,13 @@ $name: filter;
 
 .#{$name} {
 
+	&__tab {
+
+		&_hidden {
+			display: none;
+		}
+	}
+
 	&__btns-wrap {
 
 		@include screen-lg() {
@@ -16,6 +23,7 @@ $name: filter;
 		display: inline-block;
 		margin-right: 20px;
 		cursor: pointer;
+		user-select: none;
 
 		&:hover,
 		&_active {

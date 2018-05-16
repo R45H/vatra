@@ -1,5 +1,7 @@
+include detail
 include ../mixins/card
 include ../mixins/select
+include ../mixins/item
 
 mixin filter(data)
 	.filter
@@ -21,15 +23,15 @@ mixin filter(data)
 				.filter__btns-wrap
 					.main__space-bot
 						.title.filter__toggle.filter__toggle_active 351 интерьеров
-							.filter__view-btn.filter__view-btn_four.filter__view-btn_active
-							.filter__view-btn.filter__view-btn_one
-						.title.filter__toggle 2420 элементов
+							.filter__view-btn.filter__view-btn_four.filter__view-btn_active(data-filter-link='tab-1')
+							.filter__view-btn.filter__view-btn_one(data-filter-link='tab-2')
+						.title.filter__toggle(data-filter-link='tab-3') 2420 элементов
 
 					.main__space-bot
 						a.link(href='search.html') Расширенный подбор плитки
 							i.fa.fa-long-arrow-right.link__arrow-right
 
-			.row
+			.row.filter__tab(data-filter-target='tab-1')
 
 				- var j = k = 0;
 				each val, i in card
@@ -44,3 +46,17 @@ mixin filter(data)
 
 					if ++k == 5
 						- k = 0;
+
+			.row.filter__tab.filter__tab_hidden(data-filter-target='tab-2')
+
+				- for (var i = 0; i < 3; i++) {
+					+detail({
+						more: true
+					})
+				- }
+
+			.row.filter__tab.filter__tab_hidden(data-filter-target='tab-3')
+
+				each val in item
+					.col-lg-6.col-xxl-4.main__space-col
+						+item(val)
