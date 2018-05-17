@@ -1,10 +1,10 @@
 include check
 
-mixin check-list(data)
+mixin check-list(data, id)
 	.check-list
 		.check-list__title
 			+check({
-				value: 'check-' + data.name + '-' + i,
+				value: 'check-' + data.name + (id ? '-' + id : ''),
 				text: data.name
 			})
 		.check-list__list
@@ -12,6 +12,6 @@ mixin check-list(data)
 			each val in data.list
 				.check-list__item
 					+check({
-						value: 'check-' + val + '-' + i,
+						value: 'check-' + val + (id ? '-' + id : ''),
 						text: val
 					})
