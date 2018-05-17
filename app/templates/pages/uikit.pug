@@ -206,10 +206,15 @@ include ../components/detail
 			+cat-icon(cat_icon[0])
 
 	.row.main__separator
-		.col-6
+		.col-4
 			.container
 				+slider
-		.col-6
+		.col-4
+			.container
+				+slider({
+					alone: true
+				})
+		.col-4
 			.container
 				+slider(class='slider_dots')
 

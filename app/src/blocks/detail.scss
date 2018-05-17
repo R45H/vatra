@@ -2,11 +2,25 @@ $name: detail;
 
 .#{$name} {
 
+	&__outer {
+		display: inline-block;
+		text-align: left;
+	}
+
 	&__title-wrap {
 		display: flex;
 		align-items: center;
 		text-transform: uppercase;
 		margin-bottom: 30px;
+	}
+
+	&__img {
+		border: 1px solid $color-lighter;
+
+		.fancybox__bg {
+			padding-bottom: 100%;
+			background-size: contain;
+		}
 	}
 
 	&__favourite {
@@ -52,7 +66,12 @@ $name: detail;
 
 	&__num-wrap {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
+		justify-content: center;
+
+		@include screen-md() {
+			justify-content: flex-start;
+		}
 	}
 
 	&__num-desc {
@@ -60,15 +79,38 @@ $name: detail;
 		font-size: 14px;
 	}
 
-	&__price-wrap {
-		margin-top: 30px;
-	}
-
 	&__old-price {
 		font-size: 16px;
+		text-align: center;
+
+		@include screen-md() {
+			text-align: left;
+		}
 	}
 
 	&__price {
 		font-size: 25px;
+		text-align: center;
+
+		@include screen-md() {
+			text-align: left;
+		}
+	}
+
+	&__btn-wrap {
+		text-align: center;
+
+		@include screen-md() {
+			text-align: left;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 400px;
+
+		@include screen-sm() {
+			width: auto;
+		}
 	}
 }

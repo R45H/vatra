@@ -50,7 +50,7 @@ mixin filter(data)
 			.row.filter__tab.filter__tab_hidden(data-filter-target='tab-2')
 
 				- for (var i = 0; i < 3; i++) {
-					+detail(detail[0])
+					+detail(detail[0], true)
 				- }
 
 			.row.filter__tab.filter__tab_hidden(data-filter-target='tab-3')

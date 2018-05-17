@@ -1,55 +1,65 @@
 include ../components/slider
 include ../components/slider-sm
 include ../mixins/item
+include ../mixins/fancybox
 
-mixin detail(data)
+mixin detail(data, aloneSlide)
 	.detail
 		.container
 			.row
 
-				.col-md-6.col-lg-8.main__space-col
-					+slider({
-						alone: true
-					})(class= data.detail ? 'slider_contain' : '')
-
-				.col-md-6.col-lg-4.main__space-col
-					.detail__title-wrap
-						h1.title.title_sm= card[0].title
-						a.favourite.detail__favourite(href='#')
-
-					.detail__list(class= data.detail ? 'detail__list_table' : '')
-
-						if data.list
-							each val in data.list
-								.detail__list-item
-									.detail__list-title(class= val.upper ? 'detail__list-title_upper' : '')!= val.title
-
-									if val.value
-										.detail__list-value!= val.value
+				.main__space-col(class= data.detail ? 'col-md-6 col-xl-4' : 'col-md-6 col-lg-8')
 
 					if data.detail
-						.detail__price-wrap
+						+fancybox({
+							link: 'img/content/item/20x20.jpg',
+							title: 'detail-img',
+							bg: true
+						})(class='detail__img')
+					else
+						+slider({
+							alone: aloneSlide
+						})
 
-							if item[0].old_price
-								.detail__list-item
-									+price({
-										price: item[0].old_price,
-										old: true
-									})(class='detail__old-price')
+				.main__space-col(class= data.detail ? 'col-md-6 col-xl-4 text-center' : 'col-md-6 col-lg-4')
+					.detail__outer
+						.detail__title-wrap
+							h1.title.title_sm= card[0].title
+							a.favourite.detail__favourite(href='#')
 
+						.detail__list(class= data.detail ? 'detail__list_table' : '')
+
+							if data.list
+								each val in data.list
+									.detail__list-item
+										.detail__list-title(class= val.upper ? 'detail__list-title_upper' : '')!= val.title
+
+										if val.value
+											.detail__list-value!= val.value
+
+				if data.detail
+					.main__space-col.col-xl-4
+
+						if item[0].old_price
 							.detail__list-item
 								+price({
-									price: item[0].price,
-									strong: item[0].old_price
-								})(class='detail__price')
+									price: item[0].old_price,
+									old: true
+								})(class='detail__old-price')
 
-							.detail__list-item
-								.detail__num-wrap
-									+num
-									.detail__num-desc м<sup>2</sup>, округлено, кратно упаковке 1 м<sup>2</sup>
+						.detail__list-item
+							+price({
+								price: item[0].price,
+								strong: item[0].old_price
+							})(class='detail__price')
 
-							.detail__list-item
-								a.btn(href='#') В корзину
+						.detail__list-item
+							.detail__num-wrap
+								+num
+								.detail__num-desc м<sup>2</sup>, округлено, кратно упаковке 1 м<sup>2</sup>
+
+						.detail__list-item.detail__btn-wrap
+							a.btn.detail__btn(href='#') В корзину
 
 			.row
 

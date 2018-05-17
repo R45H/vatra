@@ -134,15 +134,4 @@ $name: slider;
 			}
 		}
 	}
-
-	&_contain {
-
-		.#{$name} {
-			// =====
-
-			&__img {
-				background-size: contain;
-			}
-		}
-	}
 }
