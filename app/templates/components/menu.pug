@@ -1,0 +1,18 @@
+mixin menu
+	.menu(class= attributes.class)
+		.menu__head
+			a.link.link_gray.menu__link.menu__link_head(href='#') Меню
+		ul.menu__wrap
+
+			each val in g_menu
+
+				if !val.other
+					li.menu__item(class= val.sub ? 'menu__item_sub' : '')
+						a.link.link_gray.menu__link(href= val.link)= val.name
+
+						if val.sub
+							ul.menu__sub
+
+								each sub in val.sub
+									li.menu__sub-item
+										a.link.link_gray.menu__sub-link(href= sub.link)= sub.name

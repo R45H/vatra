@@ -29,6 +29,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/slider-sm/slider-sm.js'
 	}());
+	(function() {
+		//=require 'blocks/menu/menu.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
