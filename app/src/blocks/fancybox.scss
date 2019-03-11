@@ -31,6 +31,10 @@ $name: fancybox;
 		}
 	}
 
+	img {
+		display: block;
+	}
+
 	&__bg {
 		display: block;
 		padding-bottom: 66%;
